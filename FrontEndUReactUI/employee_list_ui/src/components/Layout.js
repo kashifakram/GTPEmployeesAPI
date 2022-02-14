@@ -1,32 +1,20 @@
 import { Outlet, Link } from "react-router-dom";
+import { BackButton } from "./BackButton";
 
 const Layout = () => {
     return (
-      <>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/add">Add</Link>
-            </li>
-            <li>
-              <Link to="/modify">Modify</Link>
-            </li>
-            <li>
-              <Link to="/delete">Delete</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <div>
-            
-        </div>
-  
-        <Outlet />
-      </>
+        <>
+            <div>
+                <div className="container mt-3">
+                    <div className="mt-4 p-5 bg-light text-black rounded">
+                        <BackButton />
+                        <h2>Employees' list</h2>
+                    </div>
+                </div>
+            </div>
+            <Outlet />
+        </>
     )
-  };
-  
-  export default Layout;
+};
+
+export default Layout;
