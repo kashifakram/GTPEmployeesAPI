@@ -1,20 +1,36 @@
-import React from 'react'
+import React from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import allActions from "../actions";
 
 export const List = () => {
+    const list = useSelector(store => store.empR);
+    const dispatch = useDispatch();
     return (
         <div>
             <div className="container mt-5">
-                <table className="table table-hover">
+                <table className="table">
                     <thead>
                         <tr>
-                            <th style={{width: "80%"}}>Please click on Edit to find more details about each employee.</th>
-                            <th style={{width: "10%"}}><button type="button" className="btn btn-primary">Primary</button></th>
+                            <td>
+                                Please click on Edit to find more details about each employee.
+                                {dispatch(allActions.employeeListAction())}
+                            </td>
+                            <td>
+                                <button type="button" className="btn btn-primary">Primary</button>
+                            </td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td style={{width: "80%"}}>Edit</td> | 
-                            <td style={{width: "10%"}}>Remove</td>
+                            <td>
+                                Name <br />
+                                Address <br />
+                                OnGoing <br />
+                            </td>
+                            <td>
+                                <a href="#">Edit</a> &nbsp;| &nbsp;
+                                <a href="#">Delete</a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

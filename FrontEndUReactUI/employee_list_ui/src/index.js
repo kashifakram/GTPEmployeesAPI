@@ -3,13 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+import { createStore } from "redux";
+import allReducers from "./reducers";
+import { Provider } from "react-redux";
+
+//STORE -> Globalized State
+
+//Action What to do
+
+//Reducre - check action you did and based on action modify store
+
+let store = createStore(allReducers);
+
+//Dispatch this action to reducer
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
