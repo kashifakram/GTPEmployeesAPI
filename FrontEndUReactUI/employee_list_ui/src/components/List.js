@@ -13,7 +13,7 @@ export const List = () => {
                         <tr>
                             <td>
                                 Please click on Edit to find more details about each employee.
-                                {dispatch(allActions.employeeListAction())}
+                                {/* {dispatch(allActions.employeeListAction())} */}
                             </td>
                             <td>
                                 <button type="button" className="btn btn-primary">Primary</button>
