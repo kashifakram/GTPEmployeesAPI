@@ -1,9 +1,28 @@
 import { Outlet, Link } from "react-router-dom";
 import { BackButton } from "./BackButton";
+import React, { useState, createContext } from 'react'
+
+export const EmployeeContext = createContext();
 
 const Layout = () => {
+
+    const [totalCartItems, setTotalCartItems] = useState(0);
+    const [country, setCountry] = useState("aud");
+    const [cartItems, setCartItems] = useState([]);
+    const [allProducts, setAllProducts] = useState([]);
+    const [shippingCost, setShippingCost] = useState(0);
+    const [conversion, setConversion] = useState(1);
+
     return (
-        <>
+        <EmployeeContext.Provider value={{
+            cartData: {
+                totalCartItems,
+                addClickFunction, removeClickFunction, country, setCountryFunction,
+                cartItems, setCartItemsFunction, allProducts, setAllProducts,
+                shippingCost, setShippingCost,
+                conversion, setConversion
+            }
+        }}>
             <div>
                 <div className="container mt-3">
                     <div className="mt-4 p-5 bg-light text-black rounded">
@@ -13,7 +32,7 @@ const Layout = () => {
                 </div>
             </div>
             <Outlet />
-        </>
+        </EmployeeContext.Provider>
     )
 };
 
