@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import allActions from "../actions";
 
 export const List = () => {
-    const list = useSelector(store => store.empR);
-    const dispatch = useDispatch();
+    // const list = useSelector(store => store.empR);
+    // const dispatch = useDispatch();
     return (
         <div>
             <div className="container mt-5">

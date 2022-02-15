@@ -5,6 +5,13 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+const string allowSpecificOrigins = "localhost:3000";
+
+builder.Services.AddCors(o => o.AddPolicy(name: allowSpecificOrigins, builder =>
+{
+    builder.WithOrigins("http://localhost:3000/");
+}));
+
 var connectionString = builder.Configuration.GetConnectionString("LocalCS");
 
 
@@ -25,6 +32,12 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
 }
+
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true)
+    .AllowCredentials());
 
 app.UseHttpsRedirection();
 

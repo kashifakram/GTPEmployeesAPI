@@ -20,7 +20,8 @@ const Layout = () => {
                 addClickFunction, removeClickFunction, country, setCountryFunction,
                 cartItems, setCartItemsFunction, allProducts, setAllProducts,
                 shippingCost, setShippingCost,
-                conversion, setConversion
+                conversion, setConversion,
+                setTotalCartItems, setCountry, setCartItems
             }
         }}>
             <div>
