@@ -9,14 +9,14 @@ export default function Date({type}) {
         <div className="row gy-2 gx-3 align-items-center">
 
             <div className="col-auto">
-                <label className="visually-hidden" for={typeDay}>Day</label>
+                <label className="visually-hidden" htmlFor={typeDay}>Day</label>
                 <input type="text" className="form-control" id={typeDay} placeholder="" />
             </div>
 
             <div className="col-auto">
-                <label className="visually-hidden" for={typeMonth}>Month</label>
+                <label className="visually-hidden" htmlFor={typeMonth}>Month</label>
                 <select className="form-select" id={typeMonth}>
-                    <option selected>Choose...</option>
+                    <option defaultValue>Choose...</option>
                     <option value="1">January</option>
                     <option value="2">February</option>
                     <option value="3">March</option>
@@ -33,7 +33,7 @@ export default function Date({type}) {
             </div>
 
             <div className="col-auto">
-                <label className="visually-hidden" for={typeYear}>Day</label>
+                <label className="visually-hidden" htmlFor={typeYear}>Day</label>
                 <input type="text" className="form-control" id={typeYear} placeholder="" />
             </div>
 

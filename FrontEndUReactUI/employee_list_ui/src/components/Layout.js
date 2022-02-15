@@ -17,8 +17,8 @@ const Layout = () => {
         <EmployeeContext.Provider value={{
             cartData: {
                 totalCartItems,
-                addClickFunction, removeClickFunction, country, setCountryFunction,
-                cartItems, setCartItemsFunction, allProducts, setAllProducts,
+                country, 
+                cartItems, allProducts, setAllProducts,
                 shippingCost, setShippingCost,
                 conversion, setConversion,
                 setTotalCartItems, setCountry, setCartItems

@@ -23,14 +23,14 @@ export default function Radio({type}) {
     return (
         <div className="col-12">
             <div className="form-check">
-                <input className="form-check-input" type="radio" name="typeRadios" id={radioPermanentOrFullTimeValue} value={radioPermanentOrFullTimeValue} checked />
-                <label className="form-check-label" for={radioPermanentOrFullTimeValue}>
+                <input className="form-check-input" type="radio" name="typeRadios" id={radioPermanentOrFullTimeValue} value={radioPermanentOrFullTimeValue} defaultChecked />
+                <label className="form-check-label" htmlFor={radioPermanentOrFullTimeValue}>
                     {radioPermanentOrFullTimeLabel}
                 </label>
             </div>
             <div className="form-check">
                 <input className="form-check-input" type="radio" name="typeRadios" id={radioContractOrPartTimeValue} value={radioContractOrPartTimeValue} />
-                <label className="form-check-label" for="contract">
+                <label className="form-check-label" htmlFor="contract">
                     {radioContractOrPartTimeLabel}
                 </label>
             </div>

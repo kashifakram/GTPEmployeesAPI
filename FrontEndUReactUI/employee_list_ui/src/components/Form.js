@@ -4,32 +4,33 @@ import Radio from './Radio';
 
 export default function Form(props) {
     return (
+        <div className='container'>
         <form className="row g-3">
             <h2>Personal information</h2>
             <div className="col">
-                <label for="firstname" className="form-label">First name</label>
+                <label htmlFor="firstname" className="form-label">First name</label>
                 <input type="text" className="form-control" placeholder="John" aria-label="First name" id="firstname" />
             </div>
             <div className="col">
-                <label for="middlename" className="form-label">Middle name (if applicable)</label>
+                <label htmlFor="middlename" className="form-label">Middle name (if applicable)</label>
                 <input type="text" className="form-control" placeholder="" aria-label="Last name" id="middlename" />
             </div>
             <div className="col">
-                <label for="lastname" className="form-label">Middle name (if applicable)</label>
+                <label htmlFor="lastname" className="form-label">Middle name (if applicable)</label>
                 <input type="text" className="form-control" placeholder="Smith" aria-label="Last name" id="lastname" />
             </div>
 
             <h2>Contact details</h2>
 
             <div className="col-md-12">
-                <label for="inputEmail4" className="form-label">Email address</label>
+                <label htmlFor="inputEmail4" className="form-label">Email address</label>
                 <input type="email" className="form-control" id="inputEmail4" placeholder="smith.riley@gmail.com" />
             </div>
 
 
 
             <div className="col-12">
-                <label className="visually-hidden" for="mobile">Mobile number</label>
+                <label className="visually-hidden" htmlFor="mobile">Mobile number</label>
                 <small>Must be an Australian number</small>
                 <div className="input-group">
                     <div className="input-group-text">+61</div>
@@ -40,7 +41,7 @@ export default function Form(props) {
 
 
             <div className="col-12">
-                <label for="inputAddress" className="form-label">Residential address</label>
+                <label htmlFor="inputAddress" className="form-label">Residential address</label>
                 <small>Start typing address</small>
                 <input type="text" className="form-control" id="inputAddress" placeholder="1234 Example St, Sydney NSW 2000" />
             </div>
@@ -62,7 +63,7 @@ export default function Form(props) {
             <div className="col-12">
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" id="onGoing" />
-                    <label className="form-check-label" for="onGoing">
+                    <label className="form-check-label" htmlFor="onGoing">
                         On going
                     </label>
                 </div>
@@ -71,7 +72,7 @@ export default function Form(props) {
             <Radio type="time" />
 
             <div className="col-4">
-                <label className="visually-hidden" for="mobile">Hours per week</label>
+                <label className="visually-hidden" htmlFor="mobile">Hours per week</label>
                 <input type="text" className="form-control" id="mobile" placeholder="" />
             </div>
 
@@ -82,5 +83,6 @@ export default function Form(props) {
                 <button type="button" className="btn btn-secondary">Cancel</button>
             </div>
         </form>
+        </div>
     )
 }
