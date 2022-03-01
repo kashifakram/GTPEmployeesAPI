@@ -1,8 +1,10 @@
+import * as actionTypes from "../actions/types";
+
 const employeeReducer = (state = [{id: 1, name: 'Kashif'}], action) => {
     switch (action.type) {
-        case 'FETCHLIST':
+        case actionTypes.FETCHLIST:
             return state;
-        case 'MODIFY':
+        case actionTypes.MODIFY:
             return modify(state, action.payload);
         default:
             return state;
